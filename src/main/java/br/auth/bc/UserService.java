@@ -23,7 +23,6 @@ public class UserService implements UserDetailsService {
 		// jwtUser.setUsername(username);
 		// jwtUser.setPassword(bcryptEncoder.encode("123"));
 		// return jwtUser;
-
 		return new User(username, bcryptEncoder.encode("123"), Arrays.asList(new SimpleGrantedAuthority("ADMIN")));
 	}
 }
